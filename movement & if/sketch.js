@@ -18,7 +18,7 @@ let rectHeight = 50;
 
 function setup() {
   // put setup code here
-  createCanvas(1000,800,WEBGL);
+  createCanvas(windowWidth,windowHeight,WEBGL);
 
 
 }
@@ -34,8 +34,8 @@ background(255);
 
 
 
-rotateX(frameCount * 0.1);
-rotateZ(frameCount * 0.1);
+rotateX(frameCount * 0.05);
+rotateZ(frameCount * 0.05);
 cylinder(50,250);
 
 //draw rectangle
