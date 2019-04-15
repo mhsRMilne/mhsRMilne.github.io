@@ -8,17 +8,17 @@ April 8th, 2019
 let x=100;
 let y=100;
 
-let x2=770;
-let y2=200;
+let x2=100;
+let y2=100;
 
-let x3=500;
-let y3=300;
+let x3=100;
+let y3=100;
 
-let x4=300;
-let y4=800;
+let x4=100;
+let y4=100;
 
-let x5=300;
-let y5=500;
+let x5=100;
+let y5=100;
 
 
 let xSpeed = 10;
