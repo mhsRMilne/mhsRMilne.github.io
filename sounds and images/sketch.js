@@ -3,8 +3,8 @@ Sounds and Images
 Created by Ryan Milne
 April 25th, 2019
 */
-let img;
 
+let img;
 
 let width = 1200;
 let height = 800;
