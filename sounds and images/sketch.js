@@ -60,7 +60,7 @@ function draw() {
     background(255,0,0);
     textSize(50);
     text('SPACE TO RESET',400,400);
-    img.postion(100,100);
+    img.postion(width/2,width/1.5);
   }
 
 else {
