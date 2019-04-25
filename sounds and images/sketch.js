@@ -28,7 +28,7 @@ let hit = false
 
 function preload(){
 
-  img = loadImage('giphy.gif');
+  img = createImg('giphy.gif');
 
 }
 
@@ -60,7 +60,7 @@ function draw() {
     background(255,0,0);
     textSize(50);
     text('SPACE TO RESET',400,400);
-    image(img,100,100);
+    img.postion(100,100);
   }
 
 else {
