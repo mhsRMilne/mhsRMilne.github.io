@@ -28,7 +28,11 @@ let hit = false
 
 function preload(){
 
-  img = createImg('giphy.gif');
+  img = loadImage('meme.png');
+
+  img2 = loadImage('meme2.png');
+
+//  mySound = loadSound('slappy.mp3');
 
 }
 
@@ -60,7 +64,10 @@ function draw() {
     background(255,0,0);
     textSize(50);
     text('SPACE TO RESET',400,400);
-    img.position(width/2,width/1.5);
+  //  mySound.setVolume(0.1);
+  //  mySound.play();
+    img.position(100,100);
+    img2.position(600,100);
   }
 
 else {
