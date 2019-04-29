@@ -4,8 +4,6 @@ Created by Ryan Milne
 April 25th, 2019
 */
 
-let img;
-
 let width = 1200;
 let height = 800;
 
@@ -26,13 +24,19 @@ let ellipseHeight = 25;
 
 let hit = false
 
+let mySound;
+
+let img;
+
+let img2;
+
 function preload(){
 
   img = loadImage('meme.png');
 
-  img2 = loadImage('meme2.png');
+  img2 = loadImage('meme3.png');
 
-//  mySound = loadSound('slappy.mp3');
+  mySound = loadSound('slappy.mp3');
 
 }
 
@@ -50,12 +54,16 @@ function draw() {
 
   if (hit) {
     x3Speed = x3Speed*(-1);
+    mySound.setVolume(0.5);
+    mySound.play();
  }
 
   hit = collideRectCircle(x2,y2,10,150,x3,y3,25,25);
 
   if (hit) {
     x3Speed = x3Speed*(-1);
+    mySound.setVolume(0.5);
+    mySound.play();
   }
 
   hit = collideLineCircle(width-50,0,width-50,height,x3,y3,25,25) || collideLineCircle(50,0,50,height,x3,y3,25,25);
@@ -64,10 +72,10 @@ function draw() {
     background(255,0,0);
     textSize(50);
     text('SPACE TO RESET',400,400);
-  //  mySound.setVolume(0.1);
-  //  mySound.play();
-    img.position(100,100);
-    img2.position(600,100);
+
+    image(img,-50,100);
+    image(img2,875,250);
+
   }
 
 else {
