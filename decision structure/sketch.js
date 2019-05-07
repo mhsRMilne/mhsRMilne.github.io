@@ -98,6 +98,8 @@ function draw() {
           text(comChoice,width/1.3,height/2);
           textSize(50);
           text('TIE GAME',width/2,height/2);
+          textSize(20);
+          text('Press R, P or S to Play Again',width/2,height/1.5);
         }
 
          if (comChoice === "Paper") {
@@ -107,6 +109,8 @@ function draw() {
           text(comChoice,width/1.3,height/2);
           textSize(50);
           text('YOU LOSE',width/2,height/2);
+          textSize(20);
+          text('Press R, P or S to Play Again',width/2,height/1.5);
         }
 
         else if (comChoice === "Scissors") {
@@ -116,6 +120,8 @@ function draw() {
           text(comChoice,width/1.3,height/2);
           textSize(50);
           text('YOU WIN',width/2,height/2);
+          textSize(20);
+          text('Press R, P or S to Play Again',width/2,height/1.5);
         }
 
       }
@@ -134,6 +140,8 @@ function draw() {
           text(comChoice,width/1.3,height/2);
           textSize(50);
           text('YOU WIN',width/2,height/2);
+          textSize(20);
+          text('Press R, P or S to Play Again',width/2,height/1.5);
         }
 
           if (comChoice === "Paper") {
@@ -143,6 +151,8 @@ function draw() {
           text(comChoice,width/1.3,height/2);
           textSize(50);
           text('TIE GAME',width/2,height/2);
+          textSize(20);
+          text('Press R, P or S to Play Again',width/2,height/1.5);
         }
 
         else if (comChoice === "Scissors") {
@@ -152,6 +162,8 @@ function draw() {
           text(comChoice,width/1.3,height/2);
           textSize(50);
           text('YOU LOSE',width/2,height/2);
+          textSize(20);
+          text('Press R, P or S to Play Again',width/2,height/1.5);
         }
 
       }
@@ -171,6 +183,8 @@ function draw() {
           text(comChoice,width/1.3,height/2);
           textSize(50);
           text('YOU LOSE',width/2,height/2);
+          textSize(20);
+          text('Press R, P or S to Play Again',width/2,height/1.5);
         }
 
          if (comChoice === "Paper") {
@@ -180,6 +194,8 @@ function draw() {
           text(comChoice,width/1.3,height/2);
           textSize(50);
           text('YOU WIN',width/2,height/2);
+          textSize(20);
+          text('Press R, P or S to Play Again',width/2,height/1.5);
         }
 
         else if (comChoice === "Scissors") {
@@ -189,6 +205,8 @@ function draw() {
           text(comChoice,width/1.3,height/2);
           textSize(50);
           text('TIE GAME',width/2,height/2);
+          textSize(20);
+          text('Press R, P or S to Play Again',width/2,height/1.5);
         }
 
       }
