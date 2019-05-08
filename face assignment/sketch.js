@@ -10,15 +10,15 @@ let faceheight = 300;
 
 function setup() {
   // put setup code here
-
+  // create the canvas
   createCanvas(300,400);
 
-}
+} // end setup
 
 function draw() {
   // put drawing code here
   drawEars(width/4-30);
-drawEars(3*width/4+30);
+  drawEars(3*width/4+30);
 
   ellipseMode(CENTER);
 
@@ -27,13 +27,11 @@ drawEars(3*width/4+30);
   rectMode(CENTER);
   rect(width/2,3*height/4+50,facewidth/2-30,faceheight/4+1);
   fill(152,180,255);
-ellipse(width/2,height-10,width,faceheight/6);
-rect(width/2,height,width,faceheight/10);
+  ellipse(width/2,height-10,width,faceheight/6);
+  rect(width/2,height,width,faceheight/10);
   //face
   fill(247,231,152);
   ellipse(width/2,height/2,facewidth,faceheight);
-
-
 
   drawEyes(width/3,height/2)
   drawEyes(width/1.5,height/2)
@@ -41,10 +39,7 @@ rect(width/2,height,width,faceheight/10);
   drawNose();
   drawMouth(width/2,height/1.55);
 
-
-// all facial hair (im so sorry) - ryan
-
-
+// facial hair (by ryan)
 
   drawFacialhair(width/2+60,height/1.5+15-5-5-5-5-5);
   drawFacialhair(width/2+55,height/1.5+20-5-5-5-5-5);
@@ -234,9 +229,7 @@ rect(width/2,height,width,faceheight/10);
   drawFacialhair(width/2+40,height/1.5+45+5+5+5+5+5);
 
 
-
   drawFacialhair(width/2,height/1.5+75-5-5-5-5-5-5);
-
 
 
   drawFacialhair(width/2-60,height/1.5+15-5-5-5-5-5);
@@ -425,12 +418,10 @@ rect(width/2,height,width,faceheight/10);
   drawFacialhair(width/2-45,height/1.5+40+5+5+5+5+5);
   drawFacialhair(width/2-40,height/1.5+45+5+5+5+5+5);
 
-
-
   drawEyebrows();
   drawGlasses();
 
-}
+} // end draw
 
 //eyes created by Sebastian
 function drawEyes(x,y) {
@@ -472,9 +463,6 @@ quad(200/2/0.75,130/3*2,267/2/0.75,55/3*2,290/2/0.75,90/3*2,270/2/0.75,90/3*2);
 quad(267/2/0.75,55/3*2,270/2/0.75,90/3*2,300/2/0.75,110/3*2,320/2/0.75,100/3*2);
 triangle(270/2/0.75,90/3*2,250/2/0.75,110/3*2,260/2/0.75,90/3*2);
 stroke(0);
-
-
-
 }
 
 function drawNose(){
@@ -499,40 +487,37 @@ rect(eyebrowPlacementtwo,faceheight-196, eyebrowWidth, eyebrowHeight);
 
 
 
-
+// mouth (by ryan)
 function drawMouth(x,y) {
-// mouth by Ryan
+  // lips
+  fill(255);
+  stroke(255,105,151);
+  strokeWeight(3);
+  arc(x,y,facewidth/2,faceheight/3,0,PI);
+  stroke(0);
+  arc(x,y,facewidth/2,faceheight/6,0,PI);
 
-// lips
+  //teeth
+  line(x-50,y,x+50,y);
+  line(x,y,x,y+50);
+  line(x+25,y,x+25,y+43);
+  line(x-25,y,x-25,y+43);
+  stroke(255,105,151);
+  line(x-50,y,x+50,y);
+  stroke(0);
+  strokeWeight(1);
 
-fill(255);
-stroke(255,105,151);
-strokeWeight(3);
-arc(x, y, facewidth/2, faceheight/3, 0, PI);
-stroke(0);
-arc(x, y, facewidth/2, faceheight/6, 0, PI);
+  fill(255);
 
-//teeth
+} // end drawMouth
 
-line(x-50,y,x+50,y);
-line(x,y,x,y+50);
-line(x+25,y,x+25,y+43);
-line(x-25,y,x-25,y+43);
-stroke(255,105,151);
-line(x-50,y,x+50,y);
-stroke(0);
-strokeWeight(1);
-
-fill(255);
-
-}
-
+// facial hair (by ryan)
 function drawFacialhair(x,y) {
- // facial hair by Ryan
+  //stubble
   fill(0);
-  ellipse(x,y,1,1);
+  ellipse(x,y,1,1)
 
-}
+} // end drawFacialhair
 
 function drawGlasses() {
   //Glasses by Sebastian
