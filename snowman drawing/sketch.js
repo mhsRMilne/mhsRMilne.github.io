@@ -6,8 +6,8 @@ March 7th, 2019
 
 function setup() {
   // put setup code here
+  // create the canvas
   createCanvas(400,400);
-
 } // end setup
 
 function draw() {
