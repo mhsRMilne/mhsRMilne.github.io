@@ -20,10 +20,6 @@ function draw() {
   fill(255,234,0);
   ellipse(80,60,250,250);
 
-  // ground
-  fill(102,51,0);
-  rect(0,height/2+houseWidth/2-20,1200,800);
-
   // 1st House
 
   // set the width of the house
@@ -31,6 +27,10 @@ function draw() {
   var houseWidth = 400;
   var width = 1200
   var height = 800
+
+  // ground
+  fill(102,51,0);
+  rect(0,height/2+houseWidth/2-20,1200,800);
 
   // main part of the house
   fill(102,255,102);
