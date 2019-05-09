@@ -4,6 +4,7 @@ Ryan Milne
 April 10th, 2019
 */
 
+// set variable for mouse
 let x = 1
 
 function setup() {
