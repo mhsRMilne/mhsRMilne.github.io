@@ -25,15 +25,13 @@ function preload() {
   bg = loadImage('8bit.png');
   myFont = loadFont('myfont.ttf');
 
-}
+} // end preload
 
 function setup() {
   // put setup code here
   createCanvas(windowWidth,windowHeight-5);
-  //background
 
-
-}
+} // end setup
 
 function draw() {
   // put drawing code here
@@ -69,7 +67,7 @@ function draw() {
 /*--------------------END INSTRUCTIONS--------------------*/
 
 /*--------------------GAME--------------------*/
-  else if (keyPress === false) {
+    else if (keyPress === false) {
 
       background(bg);
       textSize(100);
