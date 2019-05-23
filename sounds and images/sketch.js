@@ -49,7 +49,7 @@ function setup() {
 
 function draw() {
   // put drawing code here
-
+  // if ball hits paddles, change direction
   hit = collideRectCircle(x,y,10,150,x3,y3,25,25);
 
   if (hit) {
