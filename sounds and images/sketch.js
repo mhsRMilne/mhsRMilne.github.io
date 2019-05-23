@@ -38,14 +38,14 @@ function preload(){
 
   mySound = loadSound('slappy.mp3');
 
-}
+} // end preload
 
 function setup() {
   // put setup code here
 
   createCanvas(width,height);
 
-}
+} // end setup
 
 function draw() {
   // put drawing code here
@@ -53,10 +53,10 @@ function draw() {
   hit = collideRectCircle(x,y,10,150,x3,y3,25,25);
 
   if (hit) {
-    x3Speed = x3Speed*(-1);
+    x3Speed = x3Speed*(-1); 
     mySound.setVolume(0.5);
     mySound.play();
- }
+  }
 
   hit = collideRectCircle(x2,y2,10,150,x3,y3,25,25);
 
@@ -75,10 +75,9 @@ function draw() {
 
     image(img,-50,100);
     image(img2,875,250);
-
   }
 
-else {
+  else {
     background(51,255,138);
 
     strokeWeight(1);
@@ -108,18 +107,14 @@ else {
     x3 = x3+x3Speed;
     y3 = y3+y3Speed;
 
-
-
-
-  //if reaches bottom or top, change direction
+    //if reaches bottom or top, change direction
     if (y3+ellipseHeight/2>=height || y3-ellipseHeight/2<=0) {
       y3Speed = y3Speed*(-1);
     }
+    
+    // using arrow keys to move paddles
 
-
-// using arrow keys to move paddles
-
-// left paddle
+    // left paddle
 
     if (keyIsDown(UP_ARROW)) {
       y2 = y2-5;
@@ -129,26 +124,24 @@ else {
       y2 = y2+5;
     }
 
-  // right paddle
+    // right paddle
 
-  if (keyIsDown(87)) {
-    y = y-5;
+    if (keyIsDown(87)) {
+      y = y-5;
+    }
+
+    if (keyIsDown(83)) {
+      y = y+5;
+    }
+
   }
 
-  if (keyIsDown(83)) {
-    y = y+5;
+  // reset game
+
+  if (keyIsDown(32)) {
+    x3 = 600;
+    y3 = 400;
   }
 
 
-}
-
-// reset game
-
-if (keyIsDown(32)) {
-  x3 = 600;
-  y3 = 400;
-
-}
-
-
-}
+} // end draw
