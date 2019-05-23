@@ -63,151 +63,143 @@ function draw() {
      if (keyIsDown(32)) {
        level = level + 1;
      }
- }
+   }
 /*--------------------END INSTRUCTIONS--------------------*/
 
 /*--------------------GAME--------------------*/
-    else if (keyPress === false) {
+   else if (keyPress === false) {
+     background(bg);
+     textSize(100);
+     textFont(myFont);
+     text('YOU',width/3,height/4.5);
+     text('COM',width/1.5,height/4.5);
+     line(width/2,0,width/2,height);
+   }
+} // end draw
 
+function keyPressed() {
+  //ROCK
+  if(keyCode === 82) {
+    clear();
+    keyPress = true
+    print('Rock');
+    comChoice = random(choices);
+
+    if(comChoice === 'Rock'); {
       background(bg);
-      textSize(100);
-      textFont(myFont);
-      text('YOU',width/3,height/4.5);
-      text('COM',width/1.5,height/4.5);
+      textSize(30);
+      text('Rock',width/4,height/2);
+      text(comChoice,width/1.3,height/2);
+      textSize(50);
+      text('TIE GAME',width/2,height/2);
+      textSize(20);
+      text('Press R, P or S to Play Again',width/2,height/1.5);
+    }
 
-      line(width/2,0,width/2,height);
-      }
+    if (comChoice === "Paper") {
+      background(bg);
+      textSize(30);
+      text('Rock',width/4,height/2);
+      text(comChoice,width/1.3,height/2);
+      textSize(50);
+      text('YOU LOSE',width/2,height/2);
+      textSize(20);
+      text('Press R, P or S to Play Again',width/2,height/1.5);
+    }
+
+    else if (comChoice === "Scissors") {
+      background(bg);
+      textSize(30);
+      text('Rock',width/4,height/2);
+      text(comChoice,width/1.3,height/2);
+      textSize(50);
+      text('YOU WIN',width/2,height/2);
+      textSize(20);
+      text('Press R, P or S to Play Again',width/2,height/1.5);
+    }
+  }
+  
+  //PAPER
+  if(keyCode === 80) {
+    clear();
+    keyPress = true
+    print('Paper');
+    comChoice = random(choices);
+
+    if(comChoice === 'Rock'); {
+      background(bg);
+      textSize(30);
+      text('Paper',width/4,height/2);
+      text(comChoice,width/1.3,height/2);
+      textSize(50);
+      text('YOU WIN',width/2,height/2);
+      textSize(20);
+      text('Press R, P or S to Play Again',width/2,height/1.5);
+    }
+
+    if (comChoice === "Paper") {
+      background(bg);
+      textSize(30);
+      text('Paper',width/4,height/2);
+      text(comChoice,width/1.3,height/2);
+      textSize(50);
+      text('TIE GAME',width/2,height/2);
+      textSize(20);
+      text('Press R, P or S to Play Again',width/2,height/1.5);
+    }
+
+    else if (comChoice === "Scissors") {
+      background(bg);
+      textSize(30);
+      text('Paper',width/4,height/2);
+      text(comChoice,width/1.3,height/2);
+      textSize(50);
+      text('YOU LOSE',width/2,height/2);
+      textSize(20);
+      text('Press R, P or S to Play Again',width/2,height/1.5);
+    }
   }
 
+  //SCISSORS
+  if(keyCode === 83) {
+    clear();
+    keyPress = true
+    print('Scissors');
+    comChoice = random(choices);
 
-    function keyPressed() {
-
-      //ROCK
-      if(keyCode === 82) {
-        clear();
-        keyPress = true
-        print('Rock');
-        comChoice = random(choices);
-
-        if(comChoice === 'Rock'); {
-          background(bg);
-          textSize(30);
-          text('Rock',width/4,height/2);
-          text(comChoice,width/1.3,height/2);
-          textSize(50);
-          text('TIE GAME',width/2,height/2);
-          textSize(20);
-          text('Press R, P or S to Play Again',width/2,height/1.5);
-        }
-
-         if (comChoice === "Paper") {
-          background(bg);
-          textSize(30);
-          text('Rock',width/4,height/2);
-          text(comChoice,width/1.3,height/2);
-          textSize(50);
-          text('YOU LOSE',width/2,height/2);
-          textSize(20);
-          text('Press R, P or S to Play Again',width/2,height/1.5);
-        }
-
-        else if (comChoice === "Scissors") {
-          background(bg);
-          textSize(30);
-          text('Rock',width/4,height/2);
-          text(comChoice,width/1.3,height/2);
-          textSize(50);
-          text('YOU WIN',width/2,height/2);
-          textSize(20);
-          text('Press R, P or S to Play Again',width/2,height/1.5);
-        }
-
-      }
-      //PAPER
-      if(keyCode === 80) {
-        clear();
-        keyPress = true
-        print('Paper');
-        comChoice = random(choices);
-
-
-        if(comChoice === 'Rock'); {
-          background(bg);
-          textSize(30);
-          text('Paper',width/4,height/2);
-          text(comChoice,width/1.3,height/2);
-          textSize(50);
-          text('YOU WIN',width/2,height/2);
-          textSize(20);
-          text('Press R, P or S to Play Again',width/2,height/1.5);
-        }
-
-          if (comChoice === "Paper") {
-          background(bg);
-          textSize(30);
-          text('Paper',width/4,height/2);
-          text(comChoice,width/1.3,height/2);
-          textSize(50);
-          text('TIE GAME',width/2,height/2);
-          textSize(20);
-          text('Press R, P or S to Play Again',width/2,height/1.5);
-        }
-
-        else if (comChoice === "Scissors") {
-          background(bg);
-          textSize(30);
-          text('Paper',width/4,height/2);
-          text(comChoice,width/1.3,height/2);
-          textSize(50);
-          text('YOU LOSE',width/2,height/2);
-          textSize(20);
-          text('Press R, P or S to Play Again',width/2,height/1.5);
-        }
-
-      }
-
-      //SCISSORS
-      if(keyCode === 83) {
-        clear();
-        keyPress = true
-        print('Scissors');
-        comChoice = random(choices);
-
-
-        if(comChoice === 'Rock'); {
-          background(bg);
-          textSize(30);
-          text('Scissors',width/4,height/2);
-          text(comChoice,width/1.3,height/2);
-          textSize(50);
-          text('YOU LOSE',width/2,height/2);
-          textSize(20);
-          text('Press R, P or S to Play Again',width/2,height/1.5);
-        }
-
-         if (comChoice === "Paper") {
-          background(bg);
-          textSize(30);
-          text('Scissors',width/4,height/2);
-          text(comChoice,width/1.3,height/2);
-          textSize(50);
-          text('YOU WIN',width/2,height/2);
-          textSize(20);
-          text('Press R, P or S to Play Again',width/2,height/1.5);
-        }
-
-        else if (comChoice === "Scissors") {
-          background(bg);
-          textSize(30);
-          text('Scissors',width/4,height/2);
-          text(comChoice,width/1.3,height/2);
-          textSize(50);
-          text('TIE GAME',width/2,height/2);
-          textSize(20);
-          text('Press R, P or S to Play Again',width/2,height/1.5);
-        }
-
-      }
+    if(comChoice === 'Rock'); {
+      background(bg);
+      textSize(30);
+      text('Scissors',width/4,height/2);
+      text(comChoice,width/1.3,height/2);
+      textSize(50);
+      text('YOU LOSE',width/2,height/2);
+      textSize(20);
+      text('Press R, P or S to Play Again',width/2,height/1.5);
     }
+
+    if (comChoice === "Paper") {
+      background(bg);
+      textSize(30);
+      text('Scissors',width/4,height/2);
+      text(comChoice,width/1.3,height/2);
+      textSize(50);
+      text('YOU WIN',width/2,height/2);
+      textSize(20);
+      text('Press R, P or S to Play Again',width/2,height/1.5);
+    }
+
+    else if (comChoice === "Scissors") {
+      background(bg);
+      textSize(30);
+      text('Scissors',width/4,height/2);
+      text(comChoice,width/1.3,height/2);
+      textSize(50);
+      text('TIE GAME',width/2,height/2);
+      textSize(20);
+      text('Press R, P or S to Play Again',width/2,height/1.5);
+    }
+  }
+} // end keyPressed
 
 /*--------------------END GAME--------------------*/
