@@ -14,64 +14,66 @@ Level 4 --> Win Page
 
 // GLOBAL VARIABLES
 
+// set level
 let level = 0
 
-
+//toadder position
 let x=610;
 let y=854
 
+// log position - row 1
 let x201=0;
 let x202=500;
 let x203=1000;
 let y2=150;
-
+// log position - row 2
 let x301=0;
 let x302=350;
 let x303=700;
 let x304=1050;
 let y3=175;
-
+// log position - row 3
 let x401=0;
 let x402=850;
 let y4=225;
-
+// log position - row 4
 let x501=0;
 let x502=275;
 let x503=550;
 let x504=825;
 let x505=1100;
 let y5=275;
-
+// log position - row 5
 let x601=000;
 let x602=850;
 let y6=325;
-
+// log position - row 6
 let x701=200;
 let x702=700;
 let x703=1200;
 let y7=375;
-
+// log position - row 7
 let x801=0;
 let x802=350;
 let x803=700;
 let x804=1050;
 let y8=425;
-
+// road line position
 let x9 = 0;
 let y9 = 627;
-
+// truck position - row 1
 let x1101=200;
 let x1102=950;
 let y11=740;
-
+// truck position - row 2
 let x1201=300;
 let x1202=1050;
 let y12=640;
-
+// truck position - row 3
 let x13=610;
 let y13=537.5;
 
-
+// log and truck speeds
 let xSpeed = 1;
 let x2Speed = 2;
 let x3Speed = 3;
@@ -80,25 +82,25 @@ let x5Speed = 5;
 let x6Speed = 10;
 let x7Speed = 25;
 
-
+//log heights
 let rectHeight = 50;
 let rectHeight2 = 25;
-
+// log widths
 let rectWidth1 = 200;
 let rectWidth2 = 150;
 let rectWidth3 = 400;
 let rectWidth4 = 100;
 let rectWidth5 = 400;
 
-
+// set hit
 let hit = false;
-
+// set life
 let life = 3;
-
+// size of circles for WIN and LOSE pages
 let size = 5;
-
+//set score (0/5)
 let score = 0;
-
+// when goal is reached, keep Toadder there
 let scoreToadder1 = 0
 let scoreToadder2 = 0
 let scoreToadder3 = 0
@@ -214,6 +216,7 @@ function drawToadder(x,y) {
 } // end drawToadder
 
 function drawLife() {
+  //draw lives (top right)
   if (life === 3){
     drawToadder(10,30);
     drawToadder(80,30);
@@ -229,6 +232,7 @@ function drawLife() {
 } // end drawLife
 
 function drawScore () {
+  //draw score (top left)
   if (score === 0){
     textSize(50);
     textFont(myFont);
@@ -284,6 +288,7 @@ function drawScore () {
     text('5/5', width/1.1,height/16);
     level = level + 2
   }
+  // draw Toadder when score
   if (scoreToadder1 === 1){
     drawToadder(110,105);
   }
@@ -302,6 +307,7 @@ function drawScore () {
 } // end drawScore
 
 function drawTrucks(x,y){
+  // draw trucks
   fill(255,105,180);
   stroke(0);
   strokeWeight(5);
@@ -467,76 +473,76 @@ function draw() {
     if(x201>=width) {
       x201 = 0-rectWidth1
     }
-    if(x202>=width) {
+    else if(x202>=width) {
       x202 = 0-rectWidth1
     }
-    if(x203>=width) {
+    else if(x203>=width) {
       x203 = 0-rectWidth1
     }
     //2nd row
     if(x301+rectWidth2<=0) {
       x301 = width
     }
-    if(x302+rectWidth2<=0) {
+    else if(x302+rectWidth2<=0) {
       x302 = width
     }
-    if(x303+rectWidth2<=0) {
+    else if(x303+rectWidth2<=0) {
       x303 = width
     }
-    if(x304+rectWidth2<=0) {
+    else if(x304+rectWidth2<=0) {
       x304 = width
     }
     //3rd row
     if(x401>=width) {
       x401 = 0-rectWidth3
     }
-    if(x402>=width) {
+    else if(x402>=width) {
       x402 = 0-rectWidth3
     }
     //4th row
     if(x501+rectWidth4<=0) {
       x501 = width
     }
-    if(x502+rectWidth4<=0) {
+    else if(x502+rectWidth4<=0) {
       x502 = width
     }
-    if(x503+rectWidth4<=0) {
+    else if(x503+rectWidth4<=0) {
       x503 = width
     }
-    if(x504+rectWidth4<=0) {
+    else if(x504+rectWidth4<=0) {
       x504 = width
     }
-    if(x505+rectWidth4<=0) {
+    else if(x505+rectWidth4<=0) {
       x505 = width
     }
     //5th row
     if(x601>=width) {
       x601 = 0-rectWidth5
     }
-    if(x602>=width) {
+    else if(x602>=width) {
       x602 = 0-rectWidth5
     }
     //6th row
     if(x701+rectWidth1<=0) {
       x701 = width
     }
-    if(x702+rectWidth1<=0) {
+    else if(x702+rectWidth1<=0) {
       x702 = width
     }
-    if(x703+rectWidth1<=0) {
+    else if(x703+rectWidth1<=0) {
       x703 = width
     }
     //7th row
     if(x801>=width) {
       x801 = 0-rectWidth2
     }
-    if(x802>=width) {
+    else if(x802>=width) {
       x802 = 0-rectWidth2
     }
-    if(x803>=width) {
+    else if(x803>=width) {
       x803 = 0-rectWidth2
     }
-    if(x804>=width) {
+    else if(x804>=width) {
       x804 = 0-rectWidth2
     }
     //if toadder runs into hedges
@@ -739,16 +745,16 @@ function draw() {
     if(x1101>=width) {
       x1101 = 0-250
     }
-    if(x1102>=width) {
+    else if(x1102>=width) {
       x1102 = 0-250
     }
-    if(x1201+250<=0) {
+    else if(x1201+250<=0) {
       x1201 = width
     }
-    if(x1202+250<=0) {
+    else if(x1202+250<=0) {
       x1202 = width
     }
-    if(x13>=width) {
+    else if(x13>=width) {
       x13 = 0-250
     }
     //if toadder gets hit by trucks
@@ -789,10 +795,10 @@ function draw() {
     if(x+20>width) {
       x = width-60
     }
-    if(x+30<0) {
+    else if(x+30<0) {
       x = 10
     }
-    if(y+20>=height){
+    else if(y+20>=height){
       y = height-20
     }
 
@@ -841,17 +847,37 @@ function draw() {
       y=855;
       scoreToadder5 = scoreToadder5 + 1
     }
+
+    // help Mr.Hughes find where to go
+    fill(255);
+    strokeWeight(5);
+    stroke(0);
+    textSize(20);
+    textFont(myFont);
+    textAlign(CENTER);
+    text('-->',55,125);
+    text('-->',305,125);
+    text('-->',555,125);
+    text('-->',805,125);
+    text('-->',1055,125);
+    text('<--',215,125);
+    text('<--',465,125);
+    text('<--',715,125);
+    text('<--',965,125);
+    text('<--',1215,125);
   }
 /*--------------------END GAME--------------------*/
 
 /*--------------------LOSE--------------------*/
   else if (level === 3) {
+    // looping structure takes over screen
     var x10 = 0
     for (var x10 = 0; x10 <= width; x10 = x10 + size) {
       noStroke();
       fill(random(255),0,0);
       ellipse(x10,random(windowHeight),5,5);
     }
+    //text
     fill(0);
     strokeWeight(20);
     stroke(0,0,255);
@@ -867,12 +893,14 @@ function draw() {
 
 /*--------------------WIN--------------------*/
   else if (level === 4) {
+    // looping structure takes over screen
     var x10 = 0
     for (var x10 = 0; x10 <= width; x10 = x10 + size) {
       noStroke();
       fill(0,random(255),0);
       ellipse(x10,random(windowHeight),5,5);
     }
+    text
     fill(0);
     strokeWeight(20);
     stroke(0,0,255);
