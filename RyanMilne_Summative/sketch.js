@@ -149,16 +149,16 @@ function keyPressed(){
     scoreToadder5 = 0;
   }
   // move toadder
-  if (keyCode === UP_ARROW) {
+  if (keyCode === UP_ARROW && level === 2) {
     y = y-50;
   }
-  if (keyIsDown(DOWN_ARROW)) {
+  if (keyCode === DOWN_ARROW && level === 2) {
     y = y+50;
   }
-  if (keyIsDown(LEFT_ARROW)) {
+  if (keyCode === LEFT_ARROW && level === 2) {
     x = x-50;
   }
-  if (keyIsDown(RIGHT_ARROW)) {
+  if (keyCode === RIGHT_ARROW && level === 2) {
     x = x+50;
   }
 } // end keyPressed
